@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hijab Khimar Zipper - Premium Muslimah Collection</title>
+    <title>Hijab Khimar Zipper - Premium Quality</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGzwycJ7fC6DYVo_eUzS_tHR3q25pFffNmMg&s">
@@ -13,167 +13,255 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
+            color: #333;
         }
         
         .islamic-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1e7dd' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .promo-badge {
-            background: linear-gradient(135deg, #f8d486 0%, #f0a929 100%);
-            transform: rotate(-5deg);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2U5ZjBmMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSIvPjwvc3ZnPg==');
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
         }
         
         .countdown-box {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(5px);
+            background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .price-tag {
+        .countdown-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4a6b57;
+        }
+        
+        .countdown-label {
+            font-size: 0.7rem;
+            color: #4a6b57;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: relative;
-            overflow: hidden;
         }
         
-        .price-tag::before {
+        .testimonial-card:before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #8e9eab 0%, #eef2f3 100%);
+            border-radius: 10px 10px 0 0;
         }
         
-        .testimonial-card {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        .price-tag {
+            position: relative;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+            color: #4a6b57;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        .price-tag:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%) rotate(45deg);
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+            z-index: -1;
+        }
+        
+        .promo-banner {
+            background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .promo-banner:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+        
+        .color-variant {
             transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
         
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        .color-variant:hover {
+            transform: scale(1.05);
+            border-color: #8e9eab;
         }
         
-        .form-container {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        .color-variant.active {
+            border-color: #4a6b57;
+            box-shadow: 0 0 0 3px rgba(74, 107, 87, 0.3);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a6b57;
+            font-size: 1.5rem;
         }
     </style>
 </head>
-<body class="text-gray-800">
-    <!-- Header with Main Image -->
-    <header class="islamic-pattern">
-        <div class="container mx-auto px-4 py-8">
-            <div class="max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
-                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lpar8zhzuslpec.webp" alt="Hijab Khimar Zipper" class="w-full h-auto object-cover">
+<body class="relative">
+    <div class="islamic-pattern"></div>
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-mosque text-2xl text-emerald-700 mr-2"></i>
+                <span class="text-xl font-bold text-emerald-800">HijabPremium</span>
             </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-emerald-700 hover:text-emerald-900">Beranda</a>
+                <a href="#" class="text-gray-600 hover:text-emerald-700">Produk</a>
+                <a href="#" class="text-gray-600 hover:text-emerald-700">Tentang Kami</a>
+                <a href="#" class="text-gray-600 hover:text-emerald-700">Kontak</a>
+            </div>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
     </header>
-
-    <!-- Product Title and Description -->
-    <section class="py-8 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h1 class="text-3xl md:text-4xl font-bold text-center text-emerald-800 mb-4">Hijab Khimar Zipper</h1>
-            <p class="text-lg text-gray-600 text-center max-w-2xl mx-auto">
-                Kerudung Segi Empat ini bentuk retsletingnya tersembunyi tidak terlalu panjang jadi jilbab bisa dipakai dengan berbagai cara pakai dan gaya
-            </p>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Product Image -->
+        <div class="mb-8 rounded-lg overflow-hidden shadow-lg">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lpar8zhzuslpec.webp" alt="Hijab Khimar Zipper" class="w-full h-auto object-cover">
         </div>
-    </section>
-
-    <!-- Product Details and Advantages -->
-    <section class="py-12 bg-emerald-50">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden">
-                <div class="p-6 md:p-8">
-                    <h2 class="text-2xl font-bold text-emerald-800 mb-4">Detail & Keunggulan Produk</h2>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <span class="text-emerald-500 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <span>Jilbab Segiempat ukuran 130 x 130 cm sebelum jadi. Setelah jadi Panjang depan 92 cm - panjang belakang 95 cm</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-emerald-500 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <span>Dipakai dua lapis tidak menerawang</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-emerald-500 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <span>Lembut dan nyaman dipakai seharian</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-emerald-500 mr-2 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <span>Bahan premium lembut, adem, dan mudah dibentuk</span>
-                        </li>
-                    </ul>
+        
+        <!-- Product Title & Description -->
+        <div class="mb-12 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-emerald-800 mb-4">Hijab Khimar Zipper</h1>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">Kerudung Segi Empat ini bentuk retsletingnya tersembunyi tidak terlalu panjang jadi jilbab bisa dipakai dengan berbagai cara pakai dan gaya. Desain modern dengan sentuhan elegan untuk penampilan yang lebih anggun.</p>
+        </div>
+        
+        <!-- Product Features -->
+        <div class="mb-12 bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-emerald-800 mb-6 text-center">Keunggulan Produk</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="feature-icon mr-4">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-800">Ukuran Sempurna</h3>
+                            <p class="text-gray-600">Jilbab Segiempat ukuran 130 x 130 cm sebelum jadi. Setelah jadi Panjang depan 92 cm - panjang belakang 95 cm.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="feature-icon mr-4">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-800">Tidak Menerawang</h3>
+                            <p class="text-gray-600">Dipakai dua lapis tidak menerawang, memberikan perlindungan maksimal dengan tetap stylish.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="feature-icon mr-4">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-800">Nyaman Sepanjang Hari</h3>
+                            <p class="text-gray-600">Lembut dan nyaman dipakai seharian, tidak gerah dan tidak mudah bergeser.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="feature-icon mr-4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-800">Bahan Premium</h3>
+                            <p class="text-gray-600">Bahan premium lembut, adem, dan mudah dibentuk sesuai gaya yang diinginkan.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Product Detail Images -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-2xl font-bold text-center text-emerald-800 mb-8">Detail Produk</h2>
-            
+        
+        <!-- Product Details -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-emerald-800 mb-6 text-center">Detail Produk</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-lpar8zhzxl728b.webp" alt="Detail Hijab 1" class="w-full h-auto">
                     <div class="p-4">
-                        <p class="text-gray-600 text-center">Desain zipper tersembunyi yang elegan</p>
+                        <p class="text-gray-700 text-center">Desain zipper tersembunyi yang elegan</p>
                     </div>
                 </div>
-                
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98v-lpar8zi01swe5c.webp" alt="Detail Hijab 2" class="w-full h-auto">
                     <div class="p-4">
-                        <p class="text-gray-600 text-center">Tampilan depan yang rapi dan modis</p>
+                        <p class="text-gray-700 text-center">Tekstur bahan yang lembut dan premium</p>
                     </div>
                 </div>
-                
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98z-lpar8zhzyzrifc.webp" alt="Detail Hijab 3" class="w-full h-auto">
                     <div class="p-4">
-                        <p class="text-gray-600 text-center">Tampilan belakang yang flowy dan anggun</p>
+                        <p class="text-gray-700 text-center">Tampilan stylish dari berbagai angle</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Color Variants -->
-    <section class="py-12 bg-emerald-50">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-2xl font-bold text-center text-emerald-800 mb-8">Varian Warna</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-llyg1mkce37839.webp" alt="Varian Warna 1" class="w-full h-auto">
+        
+        <!-- Color Variants -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-emerald-800 mb-6 text-center">Varian Warna</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                <div class="color-variant rounded-lg overflow-hidden shadow-md">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-llyg1mkce37839.webp" alt="Warna 1" class="w-full h-auto">
                 </div>
-                
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-llyg1mkccoms58.webp" alt="Varian Warna 2" class="w-full h-auto">
+                <div class="color-variant rounded-lg overflow-hidden shadow-md">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-llyg1mkccoms58.webp" alt="Warna 2" class="w-full h-auto">
                 </div>
-                
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-llyff8o3re6kbb.webp" alt="Varian Warna 3" class="w-full h-auto">
+                <div class="color-variant rounded-lg overflow-hidden shadow-md">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-llyff8o3re6kbb.webp" alt="Warna 3" class="w-full h-auto">
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-2xl font-bold text-center text-emerald-800 mb-8">Apa Kata Pelanggan Kami?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="testimonial-card bg-white p-6 rounded-xl border border-emerald-100">
+        
+        <!-- Testimonials -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-emerald-800 mb-6 text-center">Testimoni Pelanggan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="testimonial-card p-6">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 mr-4">
                             <i class="fas fa-user text-xl"></i>
                         </div>
-                        <div class="ml-4">
-                            <h4 class="font-semibold">Siti Rahmah</h4>
-                            <div class="flex text-yellow-400 text-sm">
+                        <div>
+                            <h4 class="font-semibold">Siti Rahma</h4>
+                            <div class="flex text-yellow-400">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -182,40 +270,34 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600">
-                        "Hijabnya sangat nyaman dipakai seharian, bahan adem dan tidak gerah. Zipper tersembunyi membuat tampilan lebih rapi. Sudah beli 3 warna berbeda!"
-                    </p>
+                    <p class="text-gray-600">"Hijabnya sangat nyaman dipakai seharian, bahannya adem dan tidak gerah. Zipper-nya juga rapi dan tidak terlihat, membuat penampilan tetap elegan."</p>
                 </div>
-                
-                <div class="testimonial-card bg-white p-6 rounded-xl border border-emerald-100">
+                <div class="testimonial-card p-6">
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 mr-4">
                             <i class="fas fa-user text-xl"></i>
                         </div>
-                        <div class="ml-4">
-                            <h4 class="font-semibold">Aisyah Nur</h4>
-                            <div class="flex text-yellow-400 text-sm">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600">
-                        "Pengiriman cepat dan packing rapi. Hijabnya premium banget, lembut dan jatuh. Ukuran pas, tidak terlalu panjang. Sudah direkomendasikan ke teman-teman!"
-                    </p>
-                </div>
-                
-                <div class="testimonial-card bg-white p-6 rounded-xl border border-emerald-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                            <i class="fas fa-user text-xl"></i>
-                        </div>
-                        <div class="ml-4">
+                        <div>
                             <h4 class="font-semibold">Dewi Lestari</h4>
-                            <div class="flex text-yellow-400 text-sm">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Saya sudah mencoba banyak hijab, tapi ini yang paling nyaman. Bahannya premium dan tidak mudah kusut. Sangat worth it untuk harganya!"</p>
+                </div>
+                <div class="testimonial-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Aisyah Putri</h4>
+                            <div class="flex text-yellow-400">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -224,126 +306,71 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600">
-                        "Saya suka sekali dengan model zipper-nya yang praktis. Bisa dipakai untuk acara formal maupun casual. Warnanya tidak luntur meski sudah beberapa kali dicuci."
-                    </p>
+                    <p class="text-gray-600">"Pengiriman cepat dan packing rapi. Hijabnya lembut dan jatuh sempurna. Ukurannya pas dan bisa dipakai dengan berbagai gaya. Recommended banget!"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Promo Countdown -->
+        <div class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="promo-banner py-4 px-6 text-center">
+                <h3 class="text-xl font-bold text-white mb-2 relative z-10">PROMO SPESIAL HARI INI</h3>
+                <p class="text-white mb-4 relative z-10">Dapatkan Diskon Spesial Untuk Hari Ini Saja, Harga Akan Kembali Normal Setelah:</p>
+                
+                <div class="flex justify-center space-x-4 mb-4 relative z-10">
+                    <div class="countdown-box px-4 py-2 text-center">
+                        <div class="countdown-number" id="countdown-hours">12</div>
+                        <div class="countdown-label">JAM</div>
+                    </div>
+                    <div class="countdown-box px-4 py-2 text-center">
+                        <div class="countdown-number" id="countdown-minutes">45</div>
+                        <div class="countdown-label">MENIT</div>
+                    </div>
+                    <div class="countdown-box px-4 py-2 text-center">
+                        <div class="countdown-number" id="countdown-seconds">30</div>
+                        <div class="countdown-label">DETIK</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <span class="text-gray-500 line-through text-lg">Rp 149.000</span>
+                        <div class="text-3xl font-bold text-emerald-700">Rp 109.000</div>
+                        <span class="text-emerald-600 font-semibold">Anda Hemat Rp 40.000</span>
+                    </div>
+                    <div class="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-lg font-semibold">
+                        <i class="fas fa-tag mr-2"></i> DISKON 27%
+                    </div>
                 </div>
                 
-                <div class="testimonial-card bg-white p-6 rounded-xl border border-emerald-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                            <i class="fas fa-user text-xl"></i>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0 text-yellow-500">
+                            <i class="fas fa-exclamation-circle"></i>
                         </div>
-                        <div class="ml-4">
-                            <h4 class="font-semibold">Nurul Hidayati</h4>
-                            <div class="flex text-yellow-400 text-sm">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-yellow-700">
+                                <strong>Catatan Penting:</strong> Pengiriman 2 - 4 Hari Setelah Pemesanan. Mohon Isi Alamat Dengan Lengkap. 100% Product Original.
+                            </p>
                         </div>
                     </div>
-                    <p class="text-gray-600">
-                        "Pertama kali pakai langsung jatuh cinta! Bahannya sangat premium, jatuhnya bagus dan tidak mudah kusut. Pelayanan penjual juga sangat memuaskan."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promo Countdown -->
-    <section class="py-12 bg-gradient-to-r from-emerald-600 to-emerald-800 text-white">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <div class="inline-block promo-badge px-6 py-2 rounded-full mb-6">
-                <span class="font-bold uppercase text-sm">Promo Spesial Hari Ini</span>
-            </div>
-            
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">Diskon Spesial Akan Berakhir Dalam:</h2>
-            
-            <div class="flex justify-center space-x-2 md:space-x-4 mb-8">
-                <div class="countdown-box bg-white bg-opacity-20 rounded-lg p-3 w-16 md:w-20">
-                    <div class="text-2xl md:text-3xl font-bold" id="countdown-hours">12</div>
-                    <div class="text-xs md:text-sm">Jam</div>
-                </div>
-                <div class="countdown-box bg-white bg-opacity-20 rounded-lg p-3 w-16 md:w-20">
-                    <div class="text-2xl md:text-3xl font-bold" id="countdown-minutes">45</div>
-                    <div class="text-xs md:text-sm">Menit</div>
-                </div>
-                <div class="countdown-box bg-white bg-opacity-20 rounded-lg p-3 w-16 md:w-20">
-                    <div class="text-2xl md:text-3xl font-bold" id="countdown-seconds">30</div>
-                    <div class="text-xs md:text-sm">Detik</div>
-                </div>
-            </div>
-            
-            <p class="text-lg mb-6">Dapatkan Diskon Spesial Untuk Hari Ini Saja, Harga Akan Kembali Normal Setelah:</p>
-            
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
-                <div class="price-tag bg-white text-emerald-800 px-6 py-3 rounded-lg relative">
-                    <div class="text-sm line-through">Rp 199.000</div>
-                    <div class="text-2xl font-bold">Rp 145.000</div>
-                </div>
-                <div class="text-xl font-bold">
-                    Anda Hemat <span class="text-yellow-300">Rp 54.000</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Notes -->
-    <section class="py-8 bg-emerald-50">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-                <h3 class="text-lg font-semibold text-emerald-800 mb-3">Catatan Penting:</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li class="flex items-start">
-                        <i class="fas fa-truck text-emerald-500 mt-1 mr-2"></i>
-                        <span>Pengiriman 2 - 4 Hari Setelah Pemesanan</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt text-emerald-500 mt-1 mr-2"></i>
-                        <span>Mohon Isi Alamat Dengan Lengkap</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-certificate text-emerald-500 mt-1 mr-2"></i>
-                        <span>100% Product Original</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Form Section -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="mb-8 text-center">
-                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rash-m1i9bb0ss18b62.webp" alt="Promo Diskon" class="mx-auto rounded-lg shadow-lg">
-            </div>
-            
-            <div class="form-container bg-white rounded-xl border border-emerald-100 overflow-hidden">
-                <div class="bg-emerald-700 text-white p-4 text-center">
-                    <h3 class="text-xl font-bold">FORM PEMESANAN</h3>
-                    <p class="text-sm opacity-90">Isi data dengan lengkap dan benar</p>
                 </div>
                 
-                <div class="p-6">
+                <!-- Promo Image -->
+                <div class="mb-6 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rash-m1i9bb0ss18b62.webp" alt="Promo Diskon" class="w-full h-auto">
+                </div>
+                
+                <!-- Order Form -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-4 text-center">Form Pemesanan</h3>
+                    
                     <!-- OrderOnline Embed Code - v8.0.4 -->
                     <div class="ooef">
-                        <form class="orderonline-embed-form" data-username="emma" data-product-slug="hijab-khimar-zipper" data-product-id="6862ea5f2b0da0c2ef005c74" id="oo-embed-form-hijab-khimar-zipper-8064" data-origin="orderonline">
-                            <div class="ooef-loader">
-                                <style>
-                                    .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
-                                    @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
-                                    @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
-                                    .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
-                                    .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
-                                    .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
-                                    @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
-                                    @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
-                                </style>
-                                <div aria-live="polite" role="status"><div>Loading...</div></div>
-                            </div>
+                        <form class="orderonline-embed-form" data-username="emma" data-product-slug="hijab-khimar-zipper" data-product-id="6862ea5f2b0da0c2ef005c74" id="oo-embed-form-hijab-khimar-zipper-1052" data-origin="orderonline">
+                            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
                         </form>
                     </div>
                     <script>
@@ -384,7 +411,7 @@
                             }
                             xEmbedInit(window);
                             ooe('setup', 'redirect', 'https://emma.orderonline.id');
-                            ooe('init', '5f16831a9d8e8e4fb67472e5', '6862ea5f2b0da0c2ef005c74', '6862ea5f2b0da0c2ef005c75', 'oo-embed-form-hijab-khimar-zipper-8064', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false});
+                            ooe('init', '5f16831a9d8e8e4fb67472e5', '6862ea5f2b0da0c2ef005c74', '6862ea5f2b0da0c2ef005c75', 'oo-embed-form-hijab-khimar-zipper-1052', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false});
                             if (!window.jQuery) {
                                 !function(w, d, e, v, id, t, s) {
                                     if (d.getElementById(id)) return;
@@ -405,36 +432,66 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </main>
+    
     <!-- Footer -->
     <footer class="bg-emerald-900 text-white py-8">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-white hover:text-emerald-200">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                </a>
-                <a href="#" class="text-white hover:text-emerald-200">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
-                <a href="#" class="text-white hover:text-emerald-200">
-                    <i class="fab fa-facebook text-xl"></i>
-                </a>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-mosque mr-2"></i> HijabPremium
+                    </h3>
+                    <p class="text-emerald-100">Menyediakan hijab berkualitas premium dengan desain modern dan nyaman dipakai sehari-hari.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-emerald-300"></i> +62 812-3456-7890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-emerald-300"></i> info@hijabpremium.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-emerald-300"></i> Jakarta, Indonesia
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center hover:bg-emerald-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center hover:bg-emerald-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center hover:bg-emerald-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center hover:bg-emerald-700 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="text-sm opacity-80">© 2023 Hijab Khimar Zipper. All Rights Reserved.</p>
+            <div class="border-t border-emerald-800 mt-8 pt-6 text-center text-emerald-300">
+                <p>&copy; 2023 HijabPremium. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
-
+    
     <script>
         // Countdown Timer
         function updateCountdown() {
             const now = new Date();
-            const endOfDay = new Date();
-            endOfDay.setHours(23, 59, 59, 999);
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
             
-            const diff = endOfDay - now;
+            const diff = midnight - now;
             
-            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
@@ -445,6 +502,20 @@
         
         setInterval(updateCountdown, 1000);
         updateCountdown();
+        
+        // Color Variant Selection
+        const colorVariants = document.querySelectorAll('.color-variant');
+        colorVariants.forEach(variant => {
+            variant.addEventListener('click', () => {
+                colorVariants.forEach(v => v.classList.remove('active'));
+                variant.classList.add('active');
+            });
+        });
+        
+        // Activate first color variant by default
+        if (colorVariants.length > 0) {
+            colorVariants[0].classList.add('active');
+        }
     </script>
 </body>
 </html>
